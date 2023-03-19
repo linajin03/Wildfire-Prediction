@@ -73,25 +73,6 @@ def predict():
         error = "Input not valid. Try again."
         return render_template('error.html', error=error)
 
-# if __name__ == "__main__":
-#     loc = (0, 0)
-#     while True:
-#         try:
-#             user_input = input("Enter your postal code or city: ")
-#             loc = get_lat_and_long(user_input)
-#
-#             date = get_date()
-#
-#             new_data = pd.DataFrame({'LATITUDE': [loc[0]], 'LONGITUDE': [loc[1]],
-#                                      'REP_DATE': [date]})
-#             prediction = model.predict(new_data)
-#
-#             print(f"Predicted value: {prediction[0]:.2f}")
-#         except ValueError:
-#             print("Input not valid. Try again.")
-#             continue
-#         else:
-#             break
 
 if __name__ == '__main__':
     app.run(debug=True)
