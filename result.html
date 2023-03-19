@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+h2 {text-align: center;}
+
+body {
+  font-family: "Arial", "Sans-Serif";
+  font-variant: ultra-condensed;
+}
+
+/* Style the header */
+header {
+  background:url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.concept {
+  padding: 20px;
+  width: 100%;
+  background-color: DarkSeaGreen;
+  text-align: center
+}
+
+.button {
+ padding: 20px;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+ .action {
+   horizontal-align: center;
+}
+
+/* Style the footer */
+footer {
+  background-color: DarkSlateGray;
+  padding: 0px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+
+}
+
+form {
+margin: 0 auto;
+width:600px;
+}
+
+.result-panel {
+  margin: 20px auto;
+  padding: 20px;
+  width: 600px;
+  background-color: DarkSeaGreen;
+  text-align: center;
+  color: white;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<header>
+  <h2 style="color:white">the forest fire predictor</h2>
+</header>
+
+<article class="concept">
+  <h1 style="color:white">the concept</h1>
+  <p>Our team has created a predictive model in python calculating the possiblity of future random
+    forest fires occuring in your area based on past events. We trained and refined a model to
+    accomplish our results. Classifiers such as location (within a certain distance relative to
+    latitude and longitude) and date (how recent the surrounding fires were) were
+    implemented.</p>
+
+  <h1 style="color:white">how it functions</h1>
+  <p>(1) the user inputs their postal code</p>
+  <p>(2) a google api is utilized to convert that postal code into longitude and latitude</p>
+  <p>(3) etc etc etc</p>
+</article>
+
+
+<article class="button">
+  <h1 style="color:black">check your location</h1>
+</article>
+
+<form method="POST" action="/predict">
+  <label for="fname">type postal code or city here (ex: V2G 6L6; ex: Toronto): </label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<article class="concept">
+  <h1 style="color:white">the Result</h1>
+  <h2>{{prediction_result}}</h2>
+
+</article>
+<footer>
+  <p>Authors: Lina Jin, Chin Chin Jim, Rustam Atahodja<br>
+    <a href="mailto:linajin2003@gmail.com">linajin2003@gmail.com</a></p>
+</footer>
+</body>
+</html>
